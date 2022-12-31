@@ -11,10 +11,12 @@ import { Link, useNavigate } from 'react-router-dom'
 const Register = () => {
 
   const [error, setError] = useState(false)
+  const [loading, setLoading] = useState(false)
   const navigate = useNavigate()
 
   const handleSubmit = async (e) => {
     e.preventDefault()
+    setLoading(true)
     const displayName = e.target[0].value
     const email = e.target[1].value
     const password = e.target[2].value
@@ -42,6 +44,7 @@ const Register = () => {
               })
 
               await setDoc(doc(db, "userChats", res.user.uid), {})
+              setLoading(false)
 
               navigate('/')
               
@@ -72,6 +75,7 @@ const Register = () => {
             </label>
             <button type='submit'>Sign Up</button>
             {error && <span>Something went wrong</span>}
+            {loading && <span style={{textAlign: "center"}}>Creating account...</span>}
         </form>
         <p>Already have an account? <Link to='/login'>Log In</Link></p>
       </div>

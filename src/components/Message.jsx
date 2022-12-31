@@ -1,15 +1,30 @@
+import { useContext, useEffect, useRef } from "react"
+import { AuthContext } from "../context/AuthContext"
+import { ChatContext } from "../context/ChatContext"
 
 
-const Message = () => {
+const Message = ({message}) => {
+
+  const {currentUser} = useContext(AuthContext)
+  const {data} = useContext(ChatContext)
+  const ref = useRef()
+
+
+  useEffect(()=>{
+    ref.current?.scrollIntoView({behavior: "smooth"})
+  }, [message])
+
+  const dateSince = Math.floor((new Date() - (message.date.seconds*1000)) / (1000*60))
+
   return (
-    <div className="message owner">
+    <div ref={ref} className={`message ${message?.senderId === currentUser?.uid && 'owner'}`}>
       <div className="messageInfo">
-        <img src="https://image.shutterstock.com/image-photo/young-asian-woman-professional-entrepreneur-260nw-2127014192.jpg" alt="" />
-        <span>Just Now</span>
+        <img src={message?.senderId === currentUser.uid ? currentUser?.photoURL : data.user?.photoURL} alt="" />
+        <span>{`${dateSince} minutes ago`}</span>
       </div>
       <div className="messageContent">
-        <p>Hello</p>
-        <img src="https://image.shutterstock.com/image-photo/young-asian-woman-professional-entrepreneur-260nw-2127014192.jpg" alt="" />
+        {message.text && <p>{message.text}</p>}
+        {message.image && <img src={message.image} alt="" />}
       </div>
     </div>
   )
