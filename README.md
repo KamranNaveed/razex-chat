@@ -2,7 +2,7 @@
 
 This app was built using React and Firebase and allows users to communicate with each other in real-time. It has the following features:
 
-- User authentication: Users can sign up for the app using a display name, email, password, and a picture avatar. Sign-in is handled securely using Firebase's authentication service.
+- User authentication: Users can sign up for the app using a display name, email, password, and a picture avatar. Sign-in is handled securely using Firebase's authentication service. The user and chat database is constructed using Firestore.
 - Searching for users: Users can search for other users by display name and start a conversation with them.
 - Chats bar: A chats bar shows the user's recent conversations and allows them to switch between them easily.
 - Sending and viewing messages: Users can send and view messages in real-time using Firebase's Cloud Firestore database.
