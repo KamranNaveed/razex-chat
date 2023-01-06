@@ -52,3 +52,7 @@ npm start
 ```
 
 The app will be running on https://localhost:3000 
+
+<br>
+
+Thank you for checking out the project! If you have any questions or suggestions, please don't hesitate to reach out.
