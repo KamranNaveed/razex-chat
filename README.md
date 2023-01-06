@@ -19,7 +19,7 @@ This chat application allows users to communicate with each other in real-time. 
 
 <br>
 
-Check out a live preview [here](https://razex-chat.vercel.app)
+Check out a live preview [here](https://razex-chat.vercel.app). For now, this site is best viewed on a desktop.
 
 <br>
 
