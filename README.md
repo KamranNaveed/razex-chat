@@ -3,7 +3,7 @@
 
 <br>
 
-![React](https://img.shields.io/badge/React-555?style=for-the-badge&logo=React&logoColor=61DAFB) ![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=Firebase&logoColor=F57C00) 
+![React](https://img.shields.io/badge/React-555?style=for-the-badge&logo=React&logoColor=61DAFB) ![SASS](https://img.shields.io/badge/SASS-CC6699?style=for-the-badge&logo=Sass&logoColor=white) ![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=Firebase&logoColor=F57C00) 
 
 <br>
 
